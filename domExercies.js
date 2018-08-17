@@ -52,8 +52,17 @@ setInterval(function(){
 
 var button = document.querySelector("#Background");
 button.addEventListener("click",chgback);
+var white = true;
 function chgback(){
-	console.log("Changing the background color!");
-	var body = document.querySelector("body");
-	body.style.background = "yellow";
+	if(white==true){
+		console.log("Changing the background color!");
+		var body = document.querySelector("body");
+		body.style.background = "yellow";
+		white = false;
+	}
+	else{
+		var body = document.querySelector("body");
+		body.style.background = "white";
+		white = true;
+	}
 }
