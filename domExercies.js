@@ -50,4 +50,10 @@ setInterval(function(){
 	bool = !bool;
 },1000);
 
-
+var button = document.querySelector("#Background");
+button.addEventListener("click",chgback);
+function chgback(){
+	console.log("Changing the background color!");
+	var body = document.querySelector("body");
+	body.style.background = "yellow";
+}
