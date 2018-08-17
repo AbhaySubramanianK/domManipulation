@@ -1,13 +1,41 @@
 var h1 = document.querySelector("h1");
-h1.classList.toggle("red");
+h1.addEventListener("click", function(){
+	alert("H1 was clicked");
+	h1.style.background="orange";
+});
 
+var button = document.querySelector("#ClickMe");
+button.addEventListener("click",Fbutton);
+
+
+function Fbutton(){
+	var p = document.querySelector("#last");
+	p.textContent = "Well You clicked me!";
+	p.style.color = "red";
+}
 var p =document.querySelector("#last");
 var text = p.innerHTML;
 console.log(text);
 
-var ul =document.querySelector("ul");
-ul.innerHTML = "this text has just been replaced!";
+var lis = document.querySelectorAll("li");
+console.log(lis[0]);
 
+for(var i=0;i<lis.length;i++){
+	lis[i].addEventListener("click",function(){
+			alert("Hey u just clicked");
+			console.log(lis);
+			this.style.color = "purple";
+			// lis[i].textContent = "this content is replaced on clicking.";
+	});
+
+}
+
+// ul.addEventListener("click",function(){
+
+// 	alert("The list was clicked !");
+// 	ul.textContent = "This list was changed on a click";
+
+// });
 var link = document.querySelector("img");
 var bool = true;
 setInterval(function(){
